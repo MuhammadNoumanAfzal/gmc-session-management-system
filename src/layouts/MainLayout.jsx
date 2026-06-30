@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../shared/components/layout/Footer";
+// import Footer from "../shared/components/layout/Footer";
 import Navbar from "../shared/components/layout/Navbar";
 
 const MainLayout = () => {
@@ -9,7 +9,7 @@ const MainLayout = () => {
       <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-2 py-4 sm:px-4 sm:py-5 lg:px-5 lg:py-6">
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
