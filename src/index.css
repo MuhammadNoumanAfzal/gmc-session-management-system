@@ -3,21 +3,21 @@
 :root {
   --font-display: "Sora", "Segoe UI", sans-serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
-  --color-bg: #050709;
-  --color-bg-elevated: #09060f;
-  --color-surface: #140a1d;
-  --color-surface-strong: #1a1027;
-  --color-panel: #211233;
-  --color-card: rgba(20, 10, 29, 0.92);
-  --color-border: rgba(123, 72, 227, 0.26);
-  --color-border-strong: rgba(123, 72, 227, 0.5);
+  --color-bg: #120818;
+  --color-bg-elevated: #171022;
+  --color-surface: #1b0d27;
+  --color-surface-strong: #241236;
+  --color-panel: #2c1842;
+  --color-card: rgba(30, 16, 46, 0.92);
+  --color-border: rgba(168, 92, 255, 0.26);
+  --color-border-strong: rgba(168, 92, 255, 0.52);
   --color-text: #f5f7fb;
-  --color-text-muted: #b6aec8;
-  --color-accent: #7b48e3;
-  --color-accent-strong: #8f5cff;
-  --color-accent-soft: rgba(123, 72, 227, 0.18);
+  --color-text-muted: #c4b8d8;
+  --color-accent: #9d5cff;
+  --color-accent-strong: #c38bff;
+  --color-accent-soft: rgba(157, 92, 255, 0.18);
   --color-success: #34d399;
-  --shadow-glow: 0 24px 80px rgba(123, 72, 227, 0.28);
+  --shadow-glow: 0 24px 80px rgba(157, 92, 255, 0.3);
 }
 
 html {
@@ -32,9 +32,9 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top right, rgba(123, 72, 227, 0.18), transparent 24%),
-    radial-gradient(circle at top left, rgba(123, 72, 227, 0.08), transparent 18%),
-    linear-gradient(180deg, #09060f 0%, #050709 100%);
+    radial-gradient(circle at top right, rgba(195, 139, 255, 0.18), transparent 24%),
+    radial-gradient(circle at top left, rgba(157, 92, 255, 0.1), transparent 18%),
+    linear-gradient(180deg, #1b0d27 0%, #120818 100%);
   color: var(--color-text);
   font-family: var(--font-body);
 }
@@ -49,7 +49,7 @@ a {
 }
 
 ::selection {
-  background: rgba(123, 72, 227, 0.35);
+  background: rgba(157, 92, 255, 0.35);
   color: #fff;
 }
 
@@ -107,5 +107,5 @@ a {
 }
 
 .hero-chip:hover {
-  box-shadow: 0 0 22px rgba(123, 72, 227, 0.2);
+  box-shadow: 0 0 22px rgba(195, 139, 255, 0.22);
 }

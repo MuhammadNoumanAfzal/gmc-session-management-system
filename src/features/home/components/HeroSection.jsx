@@ -91,11 +91,11 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden rounded-[2rem] bg-[#12091b] px-4 py-6 sm:px-5 lg:px-8 lg:py-8"
+      className="relative overflow-hidden rounded-[2rem] bg-[#1b0d27] px-4 py-6 sm:px-5 lg:px-8 lg:py-8"
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[58%] top-[14%] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(123,72,227,0.18)_0%,rgba(123,72,227,0)_70%)] blur-3xl" />
-        <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_20%_20%,rgba(123,72,227,0.1),transparent_22%),radial-gradient(circle_at_80%_30%,rgba(123,72,227,0.06),transparent_18%),radial-gradient(circle_at_55%_80%,rgba(123,72,227,0.08),transparent_24%)]" />
+        <div className="absolute left-[58%] top-[14%] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(195,139,255,0.24)_0%,rgba(195,139,255,0)_70%)] blur-3xl" />
+        <div className="absolute inset-0 opacity-25 [background:radial-gradient(circle_at_20%_20%,rgba(195,139,255,0.12),transparent_22%),radial-gradient(circle_at_80%_30%,rgba(157,92,255,0.08),transparent_18%),radial-gradient(circle_at_55%_80%,rgba(157,92,255,0.09),transparent_24%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.018)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.018)_1px,transparent_1px)] bg-[size:42px_42px] opacity-20" />
       </div>
 
@@ -117,7 +117,7 @@ const HeroSection = () => {
                 Book a Session With Scholarship Winners
               </span>
               <span
-                className="hero-reveal mt-2 block bg-[linear-gradient(135deg,#7B48E3_0%,#8F5CFF_100%)] bg-clip-text text-transparent"
+                className="hero-reveal mt-2 block bg-[linear-gradient(135deg,#9D5CFF_0%,#C38BFF_100%)] bg-clip-text text-transparent"
                 style={{ animationDelay: "0.28s" }}
               >
                 Fully Funded Scholarships
@@ -138,10 +138,10 @@ const HeroSection = () => {
             {heroBenefits.map((benefit, index) => (
               <article
                 key={benefit}
-                className="hero-chip hero-reveal flex items-center gap-3 rounded-[1.2rem] border border-[var(--color-border)] bg-[rgba(33,18,51,0.52)] px-4 py-2.5 text-[0.92rem] text-white backdrop-blur-md"
+                className="hero-chip hero-reveal flex items-center gap-3 rounded-[1.2rem] border border-[var(--color-border)] bg-[rgba(44,24,66,0.58)] px-4 py-2.5 text-[0.92rem] text-white backdrop-blur-md"
                 style={{ animationDelay: `${0.58 + index * 0.06}s` }}
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[rgba(123,72,227,0.16)] text-white transition-all duration-300">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[rgba(157,92,255,0.18)] text-white transition-all duration-300">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-4 w-4"
@@ -169,13 +169,13 @@ const HeroSection = () => {
             <button
               type="button"
               onClick={handleConsultation}
-              className="rounded-full bg-[linear-gradient(135deg,#7B48E3_0%,#8F5CFF_100%)] px-6 py-3.5 text-[0.96rem] font-semibold text-white shadow-[0_0_35px_rgba(123,72,227,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(123,72,227,0.46)]"
+              className="rounded-full bg-[linear-gradient(135deg,#9D5CFF_0%,#C38BFF_100%)] px-6 py-3.5 text-[0.96rem] font-semibold text-white shadow-[0_0_35px_rgba(157,92,255,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(195,139,255,0.46)]"
             >
               Book Your Consultation Session
             </button>
             <a
               href="#mentors"
-              className="group inline-flex items-center justify-center gap-3 rounded-full border border-[var(--color-border-strong)] bg-[rgba(255,255,255,0.04)] px-6 py-3.5 text-[0.96rem] font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-[var(--color-accent-soft)]"
+              className="group inline-flex items-center justify-center gap-3 rounded-full border border-[var(--color-border-strong)] bg-[rgba(255,255,255,0.04)] px-6 py-3.5 text-[0.96rem] font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-[rgba(195,139,255,0.16)]"
             >
               Explore Our Mentors
               <svg
@@ -212,11 +212,11 @@ const HeroSection = () => {
           className="hero-reveal relative min-h-[27rem] py-0 lg:min-h-[31rem] lg:py-1"
           style={{ animationDelay: "0.34s" }}
         >
-          <div className="absolute inset-x-10 top-1 h-28 rounded-full bg-[radial-gradient(circle,rgba(123,72,227,0.18)_0%,rgba(123,72,227,0)_70%)] blur-3xl" />
+          <div className="absolute inset-x-10 top-1 h-28 rounded-full bg-[radial-gradient(circle,rgba(195,139,255,0.24)_0%,rgba(195,139,255,0)_70%)] blur-3xl" />
 
-          <div className="absolute inset-x-8 top-3 rounded-[1.8rem] border border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(20,10,29,0.82)_0%,rgba(33,18,51,0.72)_100%)] p-4 shadow-[0_28px_70px_rgba(123,72,227,0.18)]">
-            <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-[linear-gradient(160deg,rgba(20,10,29,0.55)_0%,rgba(33,18,51,0.3)_100%)]">
-              <div className="relative flex min-h-[22rem] items-end justify-center bg-[radial-gradient(circle_at_top,rgba(123,72,227,0.14),transparent_46%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(20,10,29,0.2)_100%)] px-6 pt-8">
+          <div className="absolute inset-x-8 top-3 rounded-[1.8rem] border border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(36,18,54,0.86)_0%,rgba(27,13,39,0.78)_100%)] p-4 shadow-[0_28px_70px_rgba(195,139,255,0.18)]">
+            <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-[linear-gradient(160deg,rgba(44,24,66,0.48)_0%,rgba(27,13,39,0.3)_100%)]">
+              <div className="relative flex min-h-[22rem] items-end justify-center bg-[radial-gradient(circle_at_top,rgba(195,139,255,0.18),transparent_46%),linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(27,13,39,0.2)_100%)] px-6 pt-8">
                 <img
                   src={heroIllustration}
                   alt="Scholarship consultation mentor"
