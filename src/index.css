@@ -31,10 +31,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at top right, rgba(195, 139, 255, 0.18), transparent 24%),
-    radial-gradient(circle at top left, rgba(157, 92, 255, 0.1), transparent 18%),
-    linear-gradient(180deg, #1b0d27 0%, #0f0715 100%);
+  background: #0f0715;
   color: var(--color-text);
   font-family: var(--font-body);
 }

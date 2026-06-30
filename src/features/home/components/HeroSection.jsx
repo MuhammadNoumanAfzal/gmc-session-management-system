@@ -1,4 +1,14 @@
 import { motion } from "framer-motion";
+import {
+  HiArrowRight,
+  HiCheck,
+  HiGlobeAlt,
+  HiMiniAcademicCap,
+  HiMiniCheckBadge,
+  HiMiniDocumentText,
+  HiMiniSparkles,
+  HiMiniUserGroup,
+} from "react-icons/hi2";
 import Swal from "sweetalert2";
 import {
   floatingInsightCards,
@@ -48,37 +58,19 @@ const iconContainerClasses = {
     "border-[var(--color-border-strong)] bg-[rgba(123,72,227,0.18)] text-white",
 };
 
+const benefitIcons = {
+  consultation: HiMiniUserGroup,
+  shortlisting: HiMiniAcademicCap,
+  review: HiMiniDocumentText,
+  visa: HiMiniCheckBadge,
+};
+
 const renderCardIcon = (icon) => {
   if (icon === "globe") {
-    return (
-      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-        <path
-          d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9Z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        />
-        <path
-          d="M3.5 9h17M3.5 15h17M12 3c2.2 2.4 3.4 5.45 3.4 9S14.2 18.6 12 21c-2.2-2.4-3.4-5.45-3.4-9S9.8 5.4 12 3Z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
+    return <HiGlobeAlt className="h-4 w-4" aria-hidden="true" />;
   }
 
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path
-        d="m12 3 2.35 4.76 5.25.76-3.8 3.7.9 5.23L12 15.98 7.3 17.45l.9-5.23-3.8-3.7 5.25-.76L12 3Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return <HiMiniSparkles className="h-4 w-4" aria-hidden="true" />;
 };
 
 const HeroSection = () => {
@@ -141,31 +133,34 @@ const HeroSection = () => {
           </div>
 
           <div className="grid max-w-2xl gap-3 sm:grid-cols-2">
-            {heroBenefits.map((benefit, index) => (
+            {heroBenefits.map((benefit, index) => {
+              const BenefitIcon = benefitIcons[benefit.icon] ?? HiMiniCheckBadge;
+
+              return (
               <article
-                key={benefit}
-                className="hero-chip hero-reveal flex items-center gap-3 rounded-[1.2rem] border border-[var(--color-border)] bg-[rgba(44,24,66,0.58)] px-4 py-2.5 text-[0.92rem] text-white backdrop-blur-md"
+                key={benefit.label}
+                className="hero-chip hero-reveal group flex items-center gap-3 rounded-[1.2rem] border border-[var(--color-border)] bg-[rgba(44,24,66,0.58)] px-4 py-2.5 text-[0.92rem] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(123,72,227,0.44)]"
                 style={{ animationDelay: `${0.58 + index * 0.06}s` }}
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[rgba(157,92,255,0.18)] text-white transition-all duration-300">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4"
-                    fill="none"
-                    aria-hidden="true"
+                <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[rgba(123,72,227,0.28)] bg-[rgba(157,92,255,0.18)] text-white transition-all duration-300 group-hover:border-[rgba(67,184,106,0.48)] group-hover:bg-[rgba(67,184,106,0.18)]">
+                  <motion.span
+                    whileHover={{ rotate: 8, scale: 1.08 }}
+                    transition={{ duration: 0.22, ease: "easeOut" }}
+                    className="flex items-center justify-center"
                   >
-                    <path
-                      d="M5.5 12.5 9.5 16.5 18.5 7.5"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                    <BenefitIcon className="h-4.5 w-4.5" aria-hidden="true" />
+                  </motion.span>
+                  <motion.span
+                    initial={{ scale: 0.6, opacity: 0.5 }}
+                    whileHover={{ scale: 1.15, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    className="absolute inset-0 rounded-full border border-[rgba(67,184,106,0.42)]"
+                  />
                 </span>
-                <span>{benefit}</span>
+                <span>{benefit.label}</span>
               </article>
-            ))}
+              );
+            })}
           </div>
 
           <div
@@ -175,29 +170,22 @@ const HeroSection = () => {
             <button
               type="button"
               onClick={handleConsultation}
-              className="rounded-full bg-[linear-gradient(135deg,#1F7A3D_0%,#43B86A_100%)] px-6 py-3.5 text-[0.96rem] font-semibold text-white shadow-[0_0_35px_rgba(67,184,106,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(67,184,106,0.46)]"
+              className="group inline-flex rounded-full bg-[linear-gradient(135deg,#1F7A3D_0%,#43B86A_100%)] px-6 py-3.5 text-[0.96rem] font-semibold text-white shadow-[0_0_35px_rgba(67,184,106,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(67,184,106,0.46)]"
             >
-              Book Your Consultation Session
+              <span className="inline-flex items-center gap-2.5">
+                <HiCheck className="h-4.5 w-4.5 transition-transform duration-300 group-hover:scale-110" />
+                Book Your Consultation Session
+              </span>
             </button>
             <a
               href="#mentors"
               className="group inline-flex items-center justify-center gap-3 rounded-full border border-[var(--color-border-strong)] bg-[rgba(255,255,255,0.04)] px-6 py-3.5 text-[0.96rem] font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-[rgba(195,139,255,0.16)]"
             >
               Explore Our Mentors
-              <svg
-                viewBox="0 0 20 20"
+              <HiArrowRight
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                fill="none"
                 aria-hidden="true"
-              >
-                <path
-                  d="M4 10h12m-4-4 4 4-4 4"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              />
             </a>
           </div>
 

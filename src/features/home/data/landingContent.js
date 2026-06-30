@@ -1,8 +1,20 @@
 export const heroBenefits = [
-  "Scholarship Consultation",
-  "University Shortlisting",
-  "SOP, CV and Application Review",
-  "Visa Guidance",
+  {
+    label: "Scholarship Consultation",
+    icon: "consultation",
+  },
+  {
+    label: "University Shortlisting",
+    icon: "shortlisting",
+  },
+  {
+    label: "SOP, CV and Application Review",
+    icon: "review",
+  },
+  {
+    label: "Visa Guidance",
+    icon: "visa",
+  },
 ];
 
 export const floatingInsightCards = [
