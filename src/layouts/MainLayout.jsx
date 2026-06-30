@@ -4,9 +4,9 @@ import Navbar from "../shared/components/layout/Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+    <div className="min-h-screen bg-[#12091b] text-[var(--color-text)]">
       <Navbar />
-      <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-2 py-4 sm:px-4 sm:py-5 lg:px-5 lg:py-6">
         <Outlet />
       </main>
       <Footer />
