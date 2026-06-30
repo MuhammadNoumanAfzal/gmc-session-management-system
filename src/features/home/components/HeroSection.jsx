@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 import {
   floatingInsightCards,
@@ -13,9 +14,9 @@ const cardPositionClasses = {
 
 const cardVariantClasses = {
   mentor:
-    "w-[13.5rem] rounded-[1.35rem] bg-[linear-gradient(180deg,rgba(38,22,58,0.92)_0%,rgba(27,16,42,0.92)_100%)]",
+    "w-[13.5rem] min-h-[15rem] rounded-[1.35rem] bg-[linear-gradient(180deg,rgba(38,22,58,0.92)_0%,rgba(27,16,42,0.92)_100%)]",
   funding:
-    "w-[13.75rem] rounded-[1.45rem] bg-[linear-gradient(180deg,rgba(53,28,84,0.94)_0%,rgba(32,18,48,0.92)_100%)]",
+    "w-[13.75rem] min-h-[15rem] rounded-[1.45rem] bg-[linear-gradient(180deg,rgba(53,28,84,0.94)_0%,rgba(32,18,48,0.92)_100%)]",
 };
 
 const badgeVariantClasses = {
@@ -33,6 +34,11 @@ const titleVariantClasses = {
 const bodyVariantClasses = {
   mentor: "max-w-[10.75rem]",
   funding: "max-w-[11rem]",
+};
+
+const backTitleVariantClasses = {
+  mentor: "text-[0.98rem]",
+  funding: "text-[1.02rem]",
 };
 
 const iconContainerClasses = {
@@ -91,7 +97,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden rounded-[2rem] bg-[#1b0d27] px-4 py-6 sm:px-5 lg:px-8 lg:py-8"
+      className="relative overflow-hidden rounded-[2rem] bg-[#0F0715] px-4 py-6 sm:px-5 lg:px-8 lg:py-8"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[58%] top-[14%] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(195,139,255,0.24)_0%,rgba(195,139,255,0)_70%)] blur-3xl" />
@@ -236,32 +242,82 @@ const HeroSection = () => {
           </div>
 
           {floatingInsightCards.map((card, index) => (
-            <article
+            <motion.article
               key={card.title}
-              className={`hero-float absolute z-10 border border-[var(--color-border)] p-3.5 shadow-[0_18px_40px_rgba(5,7,9,0.36)] backdrop-blur-xl ${cardPositionClasses[card.position]} ${cardVariantClasses[card.variant]}`}
+              initial={{ opacity: 0, y: 20, rotateX: -8 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.4 + index * 0.18,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              whileHover={{
+                y: -6,
+                scale: 1.02,
+                boxShadow: "0 22px 44px rgba(195, 139, 255, 0.18)",
+              }}
               style={{ animationDelay: `${0.4 + index * 0.18}s` }}
+              className={`absolute z-10 cursor-pointer overflow-hidden will-change-transform [perspective:1200px] ${cardPositionClasses[card.position]} ${cardVariantClasses[card.variant]}`}
             >
-              <div className="flex items-start justify-between gap-3">
-                <span
-                  className={`inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] ${badgeVariantClasses[card.variant]}`}
-                >
-                  {card.badge}
-                </span>
-                <span
-                  className={`flex h-9 w-9 items-center justify-center rounded-full border ${iconContainerClasses[card.variant]}`}
-                >
-                  {renderCardIcon(card.icon)}
-                </span>
-              </div>
-              <h2 className={`mt-3 font-semibold leading-6 text-white ${titleVariantClasses[card.variant]}`}>
-                {card.title}
-              </h2>
-              <p
-                className={`mt-2 text-[0.8rem] leading-6 text-[var(--color-text-muted)] ${bodyVariantClasses[card.variant]}`}
+              <motion.div
+                initial={false}
+                whileHover={{ rotateY: 180 }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                className="relative h-full min-h-[15rem] w-full rounded-[inherit] [transform-style:preserve-3d]"
               >
-                {card.body}
-              </p>
-            </article>
+                <div className="absolute inset-0 overflow-hidden rounded-[inherit] border border-[var(--color-border)] p-3.5 backdrop-blur-xl [backface-visibility:hidden]">
+                  <div className="flex items-start justify-between gap-3">
+                    <span
+                      className={`inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] ${badgeVariantClasses[card.variant]}`}
+                    >
+                      {card.badge}
+                    </span>
+                    <span
+                      className={`flex h-9 w-9 items-center justify-center rounded-full border ${iconContainerClasses[card.variant]}`}
+                    >
+                      {renderCardIcon(card.icon)}
+                    </span>
+                  </div>
+                  <h2
+                    className={`mt-3 font-semibold leading-6 text-white ${titleVariantClasses[card.variant]}`}
+                  >
+                    {card.title}
+                  </h2>
+                  <p
+                    className={`mt-2 text-[0.8rem] leading-6 text-[var(--color-text-muted)] ${bodyVariantClasses[card.variant]}`}
+                  >
+                    {card.body}
+                  </p>
+                </div>
+
+                <div className="absolute inset-0 overflow-hidden rounded-[inherit] border border-[var(--color-border-strong)] bg-[linear-gradient(180deg,rgba(53,28,84,0.98)_0%,rgba(27,13,39,0.96)_100%)] p-3.5 backdrop-blur-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="inline-flex rounded-full border border-[var(--color-border-strong)] bg-[rgba(195,139,255,0.14)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">
+                      Inside
+                    </span>
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[rgba(195,139,255,0.16)] text-white">
+                      {renderCardIcon(card.icon)}
+                    </span>
+                  </div>
+                  <h3
+                    className={`mt-3 font-semibold leading-6 text-white ${backTitleVariantClasses[card.variant]}`}
+                  >
+                    What you get
+                  </h3>
+                  <div className="mt-3 space-y-2.5">
+                    {card.details.map((detail) => (
+                      <div
+                        key={detail}
+                        className="flex items-start gap-2.5 text-[0.78rem] leading-5 text-[var(--color-text-muted)]"
+                      >
+                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--color-accent-strong)]" />
+                        <span>{detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

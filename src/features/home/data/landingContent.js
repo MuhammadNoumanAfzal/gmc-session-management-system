@@ -9,6 +9,11 @@ export const floatingInsightCards = [
   {
     title: "Real Mentor Insight",
     body: "Learn what helped real winners reach top universities.",
+    details: [
+      "Application strategy from real scholarship recipients",
+      "Common mistakes to avoid before submission",
+      "Short practical advice you can apply immediately",
+    ],
     position: "top-left",
     badge: "MENTOR",
     variant: "mentor",
@@ -17,6 +22,11 @@ export const floatingInsightCards = [
   {
     title: "Paid Session. Practical Plan.",
     body: "Get a clear plan for scholarships, admissions, and next steps.",
+    details: [
+      "Profile review and scholarship fit guidance",
+      "University shortlist with next-step direction",
+      "Clear action plan after the consultation session",
+    ],
     position: "bottom-right",
     badge: "SESSION",
     variant: "funding",

@@ -4,7 +4,7 @@ import { ROUTES } from "../../constants/routes";
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 bg-[#1b0d27] backdrop-blur-[18px]">
+    <header className="sticky top-0 z-50 bg-[#0F0715] backdrop-blur-[18px]">
       <div className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
         <NavLink to="/" className="flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--color-border-strong)] bg-[linear-gradient(135deg,#9d5cff_0%,#c38bff_100%)] text-sm font-bold text-white shadow-[var(--shadow-glow)]">

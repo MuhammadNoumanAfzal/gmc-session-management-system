@@ -3,7 +3,7 @@
 :root {
   --font-display: "Sora", "Segoe UI", sans-serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
-  --color-bg: #120818;
+  --color-bg: #0f0715;
   --color-bg-elevated: #171022;
   --color-surface: #1b0d27;
   --color-surface-strong: #241236;
@@ -34,7 +34,7 @@ body {
   background:
     radial-gradient(circle at top right, rgba(195, 139, 255, 0.18), transparent 24%),
     radial-gradient(circle at top left, rgba(157, 92, 255, 0.1), transparent 18%),
-    linear-gradient(180deg, #1b0d27 0%, #120818 100%);
+    linear-gradient(180deg, #1b0d27 0%, #0f0715 100%);
   color: var(--color-text);
   font-family: var(--font-body);
 }
