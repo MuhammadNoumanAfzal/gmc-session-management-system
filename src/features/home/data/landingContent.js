@@ -1,34 +1,26 @@
 export const heroBenefits = [
-  "One-on-One Scholarship Mentorship",
-  "University and Scholarship Matching",
+  "Scholarship Consultation",
+  "University Shortlisting",
   "SOP, CV and Application Review",
-  "Admission and Visa Assistance",
+  "Visa Guidance",
 ];
 
 export const floatingInsightCards = [
   {
-    title: "Canada Mentor",
-    body: "Guidance from students who navigated real scholarship pathways.",
+    title: "Real Mentor Insight",
+    body: "Learn what helped real winners reach top universities.",
     position: "top-left",
-    badge: "CA",
+    badge: "MENTOR",
+    variant: "mentor",
+    icon: "globe",
   },
   {
-    title: "Scholarship Winner",
-    body: "University of Melbourne offer guidance and scholarship planning.",
-    position: "top-right",
-    badge: "SCH",
-  },
-  {
-    title: "Visa Approved",
-    body: "Complete admission and visa assistance from expert consultants.",
-    position: "bottom-left",
-    badge: "100%",
-  },
-  {
-    title: "$80,000+ Earned",
-    body: "Funding strategies shaped around strong profiles and top destinations.",
+    title: "Paid Session. Practical Plan.",
+    body: "Get a clear plan for scholarships, admissions, and next steps.",
     position: "bottom-right",
-    badge: "USD",
+    badge: "SESSION",
+    variant: "funding",
+    icon: "spark",
   },
 ];
 
