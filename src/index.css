@@ -3,21 +3,21 @@
 :root {
   --font-display: "Sora", "Segoe UI", sans-serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
-  --color-bg: #05080f;
-  --color-bg-elevated: #0a0f17;
-  --color-surface: #14091f;
-  --color-surface-strong: #1d0f2d;
-  --color-panel: #221235;
-  --color-card: rgba(20, 9, 31, 0.88);
-  --color-border: rgba(166, 109, 255, 0.24);
-  --color-border-strong: rgba(166, 109, 255, 0.48);
+  --color-bg: #050709;
+  --color-bg-elevated: #09060f;
+  --color-surface: #140a1d;
+  --color-surface-strong: #1a1027;
+  --color-panel: #211233;
+  --color-card: rgba(20, 10, 29, 0.92);
+  --color-border: rgba(123, 72, 227, 0.26);
+  --color-border-strong: rgba(123, 72, 227, 0.5);
   --color-text: #f5f7fb;
-  --color-text-muted: #b8b4c7;
-  --color-accent: #8b5cf6;
-  --color-accent-strong: #a855f7;
-  --color-accent-soft: rgba(139, 92, 246, 0.16);
+  --color-text-muted: #b6aec8;
+  --color-accent: #7b48e3;
+  --color-accent-strong: #8f5cff;
+  --color-accent-soft: rgba(123, 72, 227, 0.18);
   --color-success: #34d399;
-  --shadow-glow: 0 24px 80px rgba(139, 92, 246, 0.24);
+  --shadow-glow: 0 24px 80px rgba(123, 72, 227, 0.28);
 }
 
 html {
@@ -32,9 +32,9 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top right, rgba(139, 92, 246, 0.22), transparent 24%),
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 18%),
-    linear-gradient(180deg, #070b12 0%, #05080f 100%);
+    radial-gradient(circle at top right, rgba(123, 72, 227, 0.18), transparent 24%),
+    radial-gradient(circle at top left, rgba(123, 72, 227, 0.08), transparent 18%),
+    linear-gradient(180deg, #09060f 0%, #050709 100%);
   color: var(--color-text);
   font-family: var(--font-body);
 }
@@ -49,6 +49,6 @@ a {
 }
 
 ::selection {
-  background: rgba(168, 85, 247, 0.35);
+  background: rgba(123, 72, 227, 0.35);
   color: #fff;
 }

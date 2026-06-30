@@ -16,17 +16,17 @@ const HomePage = () => {
       text: "Your production-ready routing structure and theme system are now wired in.",
       icon: "success",
       confirmButtonText: "Continue",
-      confirmButtonColor: "#8b5cf6",
-      background: "#14091f",
+      confirmButtonColor: "#7B48E3",
+      background: "#140A1D",
       color: "#f5f7fb",
     });
   };
 
   return (
     <section className="space-y-8">
-      <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(29,15,45,0.96)_0%,rgba(10,15,23,0.96)_100%)] p-8 shadow-[var(--shadow-glow)] lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:p-12">
+      <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-[var(--color-border)] bg-[linear-gradient(180deg,#1A1027_0%,#09060F_100%)] p-8 shadow-[var(--shadow-glow)] lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:p-12">
         <div className="space-y-6">
-          <span className="inline-flex rounded-full border border-[var(--color-border-strong)] bg-[var(--color-accent-soft)] px-4 py-2 text-sm font-medium text-[#d9c8ff]">
+          <span className="inline-flex rounded-full border border-[var(--color-border-strong)] bg-[var(--color-accent-soft)] px-4 py-2 text-sm font-medium text-[#F5F7FB]">
             Standardized theme tokens and modular routing
           </span>
 
@@ -44,7 +44,7 @@ const HomePage = () => {
           <div className="flex flex-wrap gap-4">
             <Link
               to={ROUTES.sessions}
-              className="rounded-full bg-[linear-gradient(135deg,#6d28d9_0%,#8b5cf6_100%)] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+              className="rounded-full bg-[linear-gradient(135deg,#7B48E3_0%,#8F5CFF_100%)] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
               View sessions
             </Link>
@@ -59,8 +59,8 @@ const HomePage = () => {
         </div>
 
         <div className="rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-card)] p-6">
-          <div className="rounded-[1.75rem] border border-[var(--color-border)] bg-[linear-gradient(160deg,rgba(93,36,171,0.35)_0%,rgba(18,11,29,0.92)_60%)] p-6">
-            <p className="text-sm uppercase tracking-[0.24em] text-[#d9c8ff]">
+          <div className="rounded-[1.75rem] border border-[var(--color-border)] bg-[linear-gradient(160deg,rgba(123,72,227,0.24)_0%,rgba(20,10,29,0.92)_60%)] p-6">
+            <p className="text-sm uppercase tracking-[0.24em] text-[#F5F7FB]">
               Platform snapshot
             </p>
             <p className="mt-3 font-[var(--font-display)] text-3xl font-semibold text-white">
