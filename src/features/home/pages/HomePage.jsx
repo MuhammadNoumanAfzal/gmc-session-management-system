@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import CredibilityStrip from "../components/CredibilityStrip";
+// import CredibilityStrip from "../components/CredibilityStrip";
 import HeroSection from "../components/HeroSection";
 
 const HomePage = () => {
@@ -11,9 +11,9 @@ const HomePage = () => {
   return (
     <div className="space-y-6 lg:space-y-8">
       <HeroSection />
-      <div id="success-stories">
+      {/* <div id="success-stories">
         <CredibilityStrip />
-      </div>
+      </div> */}
     </div>
   );
 };
