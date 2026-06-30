@@ -117,7 +117,7 @@ const HeroSection = () => {
                 Book a Session With Scholarship Winners
               </span>
               <span
-                className="hero-reveal mt-2 block bg-[linear-gradient(135deg,#9D5CFF_0%,#C38BFF_100%)] bg-clip-text text-transparent"
+                className="hero-reveal mt-2 block bg-[linear-gradient(135deg,#43B86A_0%,#7BE495_100%)] bg-clip-text text-transparent"
                 style={{ animationDelay: "0.28s" }}
               >
                 Fully Funded Scholarships
@@ -169,7 +169,7 @@ const HeroSection = () => {
             <button
               type="button"
               onClick={handleConsultation}
-              className="rounded-full bg-[linear-gradient(135deg,#9D5CFF_0%,#C38BFF_100%)] px-6 py-3.5 text-[0.96rem] font-semibold text-white shadow-[0_0_35px_rgba(157,92,255,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(195,139,255,0.46)]"
+              className="rounded-full bg-[linear-gradient(135deg,#1F7A3D_0%,#43B86A_100%)] px-6 py-3.5 text-[0.96rem] font-semibold text-white shadow-[0_0_35px_rgba(67,184,106,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(67,184,106,0.46)]"
             >
               Book Your Consultation Session
             </button>

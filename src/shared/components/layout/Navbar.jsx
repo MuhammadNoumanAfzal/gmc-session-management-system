@@ -34,7 +34,7 @@ const Navbar = () => {
           </nav>
           <NavLink
             to={ROUTES.sessions}
-            className="rounded-full bg-[linear-gradient(135deg,#9D5CFF_0%,#C38BFF_100%)] px-5 py-3 text-sm font-semibold text-white shadow-[0_0_35px_rgba(157,92,255,0.34)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(195,139,255,0.42)] lg:px-6"
+            className="rounded-full bg-[linear-gradient(135deg,#1F7A3D_0%,#43B86A_100%)] px-5 py-3 text-sm font-semibold text-white shadow-[0_0_35px_rgba(67,184,106,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(67,184,106,0.42)] lg:px-6"
           >
             Book Consultation
           </NavLink>
